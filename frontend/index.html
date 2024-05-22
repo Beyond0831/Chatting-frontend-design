@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Slackr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- You can add your styles and scripts here -->
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+  <script type="module" src="src/helpers.js"></script>
+</head>
+
+<body>
+  <!-- This is an example app structure, you can modify this as much as you choose -->
+  <header class="banner">
+    <h1>Slackr</h1>
+  </header>
+
+  <main role="main">
+     
+    <div class = "page-block" id="register-page">
+      <h2>Register</h2>
+      <form>
+        Email: <input id="register-email" type="email" value="z5270625@unsw.edu.au"><br>
+        Name: <input id="register-name" type="text" value="XingShi"><br>
+        Password: <input id="register-password" type="password" value="123456abcdef"><br>
+        Confirm Password: <input id="register-password-confirm" type="password" value="123456abcdef"><br>
+        <button type="button" id="register-submit">Submit</button>
+      </form>
+      Already A Member<a href="#" class="redirect" data-redirect="login">Login</a>
+    </div>
+
+    <div class="page-block" id ='login-page'>
+      Email: <input id="login-email" type="email" value="z5270625@unsw.edu.au"><br>
+      Password: <input id="login-password" type="password" value="123456abcdef"><br>
+      <button type="button" id="login-submit">Submit</button>
+      Not A Member?<a href="#" class="redirect" data-redirect="register">Register</a>
+    </div>
+
+
+    <div class = "page-block" id="main-page">
+      <!-- create new channel part -->
+      
+      <button id="invite-people-button">Invite people to channel</button>
+
+      <button id="create-channel-button">Create Channel</button>
+      
+      <div id="inviteModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="invite-modal-close">&times;</span>
+          <h2>Invite Users to Channel</h2>
+
+          Select Channel:<select id="modal-channel-select">
+          </select> <br>
+          User list:<div id="modal-user-list">
+          </div>
+          <button id="modal-submit-button">Invite</button>
+        </div>
+      </div>
+      
+      <form class="create-channel-form">
+        Name: <input id="channel-name" type="text" value="chatting room"><br>
+        Descriptiuon: <input id="channel-description" type="text" value="introduce your channel....."><br>
+        Private Channel?:
+          <label>
+            <input type="radio" name="choice-radio" value="yes">
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="choice-radio" value="no">
+            No
+          </label> <br>
+          
+        <button type="button" id="create-channel-submit">Submit</button>
+      </form>
+
+      <!--channel information part  -->
+      <div id="public-channel-list">Public Channels</div>
+
+
+      <div id="private-channel-list">Private Channels</div>
+
+    </div>
+
+    
+    <!--  -->
+
+  </main>
+
+
+  <footer>
+    <button id = 'log-out-button' class="log-out-button">Log Out</button>
+    <p>&copy; Slackr</p>
+  </footer>
+  <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

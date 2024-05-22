@@ -1,0 +1,326 @@
+
+/* base styles, feel free to edit */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    height: 100%;
+    font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.page-block {
+  display: none;
+  width: 80vw;
+  max-width: 500px;
+  margin: 5vh auto;
+  padding: 2vh;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+  border-radius: 1vw;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 1.5vh;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  background: #4CAF50;
+  color: #fff;
+  padding: 1.5vh 0;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+a.redirect {
+  display: inline-block;
+  margin-top: 2vh;
+  color: #009688;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+a.redirect:hover {
+  text-decoration: underline;
+}
+
+#main-page {
+  font-family: Arial, sans-serif;
+  padding: 2vw;
+  background-color: #f4f4f4;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+}
+
+#main-page #create-channel-button,
+#main-page #invite-people-button,
+#main-page .create-channel-form #create-channel-submit {
+  background-color: #3498db; /* Blue */
+  color: white;
+  padding: 1vw 2vw;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  font-size: 1.6vw;
+  transition: background-color 0.3s;
+}
+
+#main-page #create-channel-button:hover,
+#main-page #invite-people-button:hover,
+#main-page .create-channel-form #create-channel-submit:hover {
+  background-color: #2980b9; /* Darker Blue */
+}
+
+#public-channel-list,
+#private-channel-list {
+  font-size: 1.5em;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  color: #333;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5vh;
+  padding: 1vh;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5vw;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.channel-button,
+.join-button,
+.leave-button {
+  padding: 0.8vh 1.2vw;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  font-size: 1.4vw;
+  transition: background-color 0.3s;
+}
+
+.channel-button {
+  background-color: grey;
+  color: white;
+}
+
+.channel-button:hover {
+  background-color: black;
+}
+
+.join-button {
+  background-color: #2ecc71; /* Green */
+  color: white;
+}
+
+.join-button:hover {
+  background-color: #27ae60; /* Darker Green */
+}
+
+.leave-button {
+  background-color: #e74c3c; /* Red */
+  color: white;
+}
+
+.leave-button:hover {
+  background-color: #c0392b; /* Darker Red */
+}
+
+.channel-page {
+  background-color: #f9f9f9;
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+}
+
+.channel-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2vh;
+  color: #333;
+}
+
+.edit-button,
+.close-button {
+  width: auto;
+  padding: 1vw 2vw;
+  font-size: 1.6vw;
+  margin-top: 2vh;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-button {
+  background-color: #3498db; /* Blue */
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #2980b9; /* Darker Blue */
+}
+
+.close-button {
+  background-color: #e74c3c; /* Red */
+  color: white;
+}
+
+.close-button:hover {
+  background-color: #c0392b; /* Darker Red */
+}
+
+.p-info-container {
+  border: 2px solid #ccc;
+  padding: 1.5vh;
+  border-radius: 1vw;
+}
+
+.channel-page p {
+  font-size: 1.6vw;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5vh;
+}
+
+.message-input {
+  font-size: 1.5rem;
+  width: 50vw;
+  margin: 3vh 0;
+}
+
+.messages-container {
+  padding: 1vw;
+  border: 1px solid #ccc;
+  border-radius: 1vw;
+  background-color: #f9f9f9;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 1.5vh;
+  padding: 1vw;
+  border: 1px solid #ddd;
+  border-radius: 1vw;
+  background-color: #fff;
+}
+
+.sender-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+
+.sender-name {
+  font-weight: bold;
+  margin-right: 1vw;
+  cursor: pointer;
+}
+
+.sender-name:hover {
+  text-decoration: underline;
+}
+
+.profile-photo {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  margin-right: 1vw;
+}
+
+.message-text {
+  margin: 0;
+  font-size: 1.6vw;
+  line-height: 1.5;
+}
+
+.message-time {
+  display: block;
+  margin-top: 1vh;
+  font-size: 1.2vw;
+  color: #888;
+}
+
+.reactions-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1vh;
+}
+
+.reaction-button {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 0.5vw;
+  padding: 0.5vh 1vw;
+  cursor: pointer;
+  font-size: 1.6vw;
+  color: black;
+}
+
+.reaction-button:hover {
+  background: #e0e0e0;
+}
+
+.create-channel-form {
+  display: none;
+}
+
+.log-out-button {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vw;
+  background-color: white;
+}
+
+.close {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+#modal-user-list li.selected {
+  background-color: #e0e0e0;
+}
+
+.send-button {
+  margin: 0 0 5vh 0;
+}
+
+.sender-name {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sender-name:hover {
+  color: blue;
+}

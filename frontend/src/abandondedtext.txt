@@ -1,0 +1,79 @@
+for getIntoChannel() function
+
+// const leaveButton = document.createElement('button');
+    // leaveButton.textContent = 'Leave the Channel';
+    // leaveButton.addEventListener('click', ()=> {
+    //     apiCallPost(`channel/${channelId}/leave`, {}, true, globalToken)
+    //     .then((result)=> {
+
+    //     })
+    //     .catch((error)=> {
+    //         alert(error);
+    //         console.log(error);
+    //     })
+    // })
+    // currentChannelPage.appendChild(leaveButton);
+
+    // const notJoinedPage = document.createElement('div');
+    // notJoinedPage.classList.add('not-joined');
+
+    // const request = document.createElement('p');
+    //     request.textContent = 'You are not a member of this channel, click the following button to join';
+    //     notJoinedPage.append(request);
+        
+    //     const joinButton = document.createElement('button');
+    //     joinButton.textContent = 'Join';
+    //     joinButton.addEventListener('click', ()=> {
+    //         apiCallPost(`channel/${channelId}/join`, {}, true, globalToken)
+    //         .then((result)=> {
+
+    //         })
+    //         .catch((error)=> {
+    //             alert(error);
+    //             console.log(error);
+    //         })
+    //     })
+    //     notJoinedPage.append(joinButton);
+
+     // channelButton.insertAdjacentElement('afterend', notJoinedPage);
+
+
+    // console.log(document.querySelectorAll('.not-joined'));
+    // if(memberList.includes(globalUserID)) {
+    //     for (const info of document.querySelectorAll('.not-joined')) {
+    //         info.style.display = 'none';
+    //     }
+    // } else {
+    //     for (const info of document.querySelectorAll('.joined')) {
+    //         info.style.display = 'none';
+    //     }
+    // }
+
+
+
+closing channel list, abandonded beacuse each channel will generate a new page
+and this can be solved using showpage 
+// close channel lists
+// document.addEventListener('closeChannelLists', ()=> {
+//     // let channelList = document.querySelectorAll();
+//     apiCallGet('channel', globalToken)
+//     .then((result) => {
+//         console.log(result);
+//         const publicLists = document.getElementById('public-channel-list');
+//         const privateLists = document.getElementById('private-channel-list');
+
+//         for (const channel of result.channels) {
+//             let currDiv = document.getElementById(`div-${channel.id}`);
+//             if (currDiv) {
+//                 currDiv.style.display = 'none';
+//                 publicLists.style.display = 'none';
+//                 privateLists.style.display = 'none';
+//             }
+
+//         } 
+//     })
+//     .catch((error)=> {
+//         alert(error);
+//         console.error(error);
+//     })
+// })
